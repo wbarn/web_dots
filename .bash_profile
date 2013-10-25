@@ -15,6 +15,12 @@ if [ -f $HOME/cirro_dot/rbenv ]; then
    cirrodot="$cirrodot rbenv"
 fi
 
+# Postgres
+if [ -f $HOME/cirro_dot/postgres ]; then
+   source $HOME/cirro_dot/postgres
+   cirrodot="$cirrodot postgres"
+fi
+
 # AWS
 # See sample .awsconfig.txt
 if [ -f $HOME/.awsconfig.txt ]; then
