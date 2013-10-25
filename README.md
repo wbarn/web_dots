@@ -14,7 +14,7 @@ Or copy and paste items from within it into your own .bash_profile.
 
 ### .gitconfig
 Helpful aliases as well as good settings.
-Include in your ~/.gitconfig:
+Include in your ~/.gitconfig after the [user] block:
 ```
 [include]
     path = ~/cirro_dot/gitconfig
