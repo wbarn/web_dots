@@ -1,0 +1,4 @@
+# rbenv path
+export PATH=$HOME/.rbenv/bin:$PATH
+# Init rbenv shims
+eval "$(rbenv init -)"

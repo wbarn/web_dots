@@ -1,0 +1,8 @@
+# Git autocomplete
+source /usr/local/git/contrib/completion/git-completion.bash
+
+# Turn on git state in command prompt
+GIT_PS1_SHOWDIRTYSTATE=true
+
+# Command prompt with "username path (git state) | "
+export PS1='\[\033[1;37m\]\u \[\033[0m\]\w$(__git_ps1)\[\033[1;37m\] | \[\033[0m\]'

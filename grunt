@@ -1,0 +1,2 @@
+# Grunt autocomplete
+eval "$(grunt --completion=bash)"

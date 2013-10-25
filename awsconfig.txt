@@ -1,0 +1,7 @@
+# This is a sample file.
+# Replace key_id and secret_key appropriately.
+
+[default]
+aws_access_key_id=
+aws_secret_access_key=
+region = us-west-2

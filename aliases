@@ -1,0 +1,40 @@
+#General
+alias ls='ls -a'
+alias ll='ls -al'
+alias ~='cd ~'
+alias sites='cd ~/sites'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+#Cirro
+alias dev="ssh C1rro@cdev1.com"
+alias prod="ssh will@5808.cl7.net"
+alias devclaro="ssh Clar0@dev.clarolabs.com"
+alias prodclaro="ssh Clar0@tox.clarolabs.com"
+alias php="drush php-eval"
+alias en="drush -y pm-enable"
+alias dis="drush -y pm-disable"
+alias un="drush -y pm-uninstall"
+alias cron="drush core-cron"
+alias cc="drush cc all"
+alias qlist="drush queue-list"
+alias qrun="drush queue-run"
+alias hosts="sudo subl /etc/hosts"
+alias httpd="subl /applications/mamp/conf/apache/httpd.conf"
+
+# Cycle drupal module with drush
+function dcyc () {
+	drush -y pm-disable $@;
+	drush -y pm-uninstall $@;
+	drush -y pm-enable $@
+}
+
+# Switch to project public folder
+function proj () {
+	cd ~/sites/$@/public
+}
+
+# Connect to Cirro ec2 instance
+function ec2 () {
+	ssh -i ~/cirrously.pem ec2-user@$1.crsly.com
+}
