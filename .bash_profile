@@ -4,7 +4,10 @@
 cirrodot="Loading cirrodot:"
 
 # PS1 Prompt with git autocomplete and git state
-source $HOME/cirro_dot/git_bash
+if [ -f $HOME/cirro_dot/git_bash ]; then
+   source $HOME/cirro_dot/git_bash
+   cirrodot="$cirrodot gitprompt"
+fi
 
 # Homebrew path
 export PATH="/usr/local/bin:$PATH"
