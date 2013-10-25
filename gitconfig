@@ -1,6 +1,7 @@
 # gitconfig standard items
 #
 # Include in ~/.gitconfig
+# Keep the [user] block and add [source] underneath it
 # [source]
 #     path = ~/cirro_dot/gitconfig
 
