@@ -1,6 +1,3 @@
-# Git autocomplete
-source /usr/local/git/contrib/completion/git-completion.bash
-
 # Turn on git state in command prompt
 GIT_PS1_SHOWDIRTYSTATE=true
 
