@@ -3,6 +3,10 @@
 # Loading texting
 cirrodot="Loading cirrodot:"
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 # PS1 Prompt with git autocomplete and git state
 if [ -f $HOME/cirro_dot/git_bash ]; then
    source $HOME/cirro_dot/git_bash
