@@ -13,7 +13,8 @@ if [ -f $HOME/cirro_dot/git_bash ]; then
    cirrodot="$cirrodot gitprompt"
 fi
 
-# Homebrew path
+# Homebrew paths
+export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
 # rbenv
