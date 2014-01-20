@@ -49,3 +49,6 @@ fi
 
 # print cirrdot loading text
 echo $cirrodot
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
