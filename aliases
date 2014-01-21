@@ -29,9 +29,14 @@ function dcyc () {
 	drush -y pm-enable $@
 }
 
-# Switch to project public folder
+# Switch to project folder
 function proj () {
-	cd ~/sites/$@/public
+	cd ~/sites/$@
+}
+
+# Switch to project public folder
+function dproj () {
+  cd ~/sites/$@/public
 }
 
 # Connect to Cirro ec2 instance
