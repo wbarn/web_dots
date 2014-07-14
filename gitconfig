@@ -3,7 +3,7 @@
 # Include in ~/.gitconfig
 # Keep the [user] block and add [source] underneath it
 # [source]
-#     path = ~/cirro_dot/gitconfig
+#     path = ~/web_dots/gitconfig
 
 [color]
     branch = auto
@@ -34,6 +34,7 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty='%h : %ar : %an : %s' --abbrev-commit --all
     ls = ls-files
+    down = pull --rebase
 
     # Show files ignored by git:
    ign = ls-files -o -i --exclude-standard

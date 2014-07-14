@@ -1,0 +1,27 @@
+#!/bin/bash
+ 
+LOCAL_DB="devclaro"
+REMOTE_DB=""
+ 
+LOCAL_USER="root"
+LOCAL_PASS="root"
+ 
+REMOTE_USER="toxscreen"
+REMOTE_PASS=''
+ 
+#user@host or host
+REMOTE_HOST="tox.clarolabs.com"
+REMOTE_PORT="22"
+ 
+echo "Start clear db $LOCAL_DB"
+ 
+echo "drop database IF EXISTS $LOCAL_DB;" | mysql -u$LOCAL_USER -p$LOCAL_PASS
+echo "CREATE DATABASE $LOCAL_DB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;" | mysql -u$LOCAL_USER -p$LOCAL_PASS
+ 
+# echo "show databases;" | mysql -u$LOCAL_USER -p$LOCAL_PASS
+ 
+echo "Start copy from $REMOTE_DB ($REMOTE_HOST) to $LOCAL_DB"
+ 
+ssh -C -p $REMOTE_PORT $REMOTE_HOST mysqldump -u$REMOTE_USER -p$REMOTE_PASS $REMOTE_DB | pv | mysql -u$LOCAL_USER -p$LOCAL_PASS $LOCAL_DB
+ 
+echo "Done... (in $SECONDS sec.)"

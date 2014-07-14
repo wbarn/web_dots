@@ -6,10 +6,11 @@ alias sites='cd ~/sites'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+#Git
+alias git=hub
+
 #Cirro
 alias starwars="telnet towel.blinkenlights.nl"
-alias dev="ssh C1rro@cdev1.com"
-alias prod="ssh will@5808.cl7.net"
 alias devclaro="ssh Clar0@dev.clarolabs.com"
 alias prodclaro="ssh Clar0@tox.clarolabs.com"
 alias en="drush -y pm-enable"
